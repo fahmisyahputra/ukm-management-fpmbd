@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Student {
+  NIM                  String                 @id
+  Name                 String
+  Faculty              String
+  Events_Participant   Events_Participant[]
+  Students_Club_Member Students_Club_Member[]
+}
+
+model Club {
+  ID                   String                 @id
+  Name                 String
+  Description          String
+  Category             String
+  ManagerID            String?
+  Status               String                 @default("pending")
+  User                 User?                  @relation(fields: [ManagerID], references: [id])
+  Event                Event[]
+  Students_Club_Member Students_Club_Member[]
+}
+
+model User {
+  id    String  @id @default(cuid())
+  email String  @unique
+  name  String?
+  role  String  @default("student")
+  Club  Club[]
+}
+
+model Students_Club_Member {
+  StudentNIM String
+  ClubID     String
+  JoinDate   DateTime
+  Role       Int
+  Status     Boolean
+  Club       Club     @relation(fields: [ClubID], references: [ID])
+  Student    Student  @relation(fields: [StudentNIM], references: [NIM])
+
+  @@id([StudentNIM, ClubID])
+}
+
+model Event {
+  ID                 String               @id @default(cuid())
+  ClubID             String
+  Title              String
+  Date               DateTime
+  Location           String
+  Club               Club                 @relation(fields: [ClubID], references: [ID])
+  Events_Participant Events_Participant[]
+}
+
+model Events_Participant {
+  EventID    String
+  StudentNIM String
+  Status     String
+  Role       String
+  Event      Event   @relation(fields: [EventID], references: [ID])
+  Student    Student @relation(fields: [StudentNIM], references: [NIM])
+
+  @@id([StudentNIM, EventID])
+}
+
+model EventLog {
+  id        String   @id
+  eventID   String
+  action    String
+  timestamp DateTime @default(now())
+}

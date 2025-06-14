@@ -1,0 +1,1210 @@
+{
+  "students": [
+    {
+      "NIM": "22001",
+      "Name": "Ashley Sanchez",
+      "Faculty": "Informatika"
+    },
+    {
+      "NIM": "22002",
+      "Name": "Kathy Hardy",
+      "Faculty": "Industri"
+    },
+    {
+      "NIM": "22003",
+      "Name": "Megan Novak",
+      "Faculty": "Sipil"
+    },
+    {
+      "NIM": "22004",
+      "Name": "Lisa White",
+      "Faculty": "Elektro"
+    },
+    {
+      "NIM": "22005",
+      "Name": "Connor Erickson",
+      "Faculty": "Sipil"
+    },
+    {
+      "NIM": "22006",
+      "Name": "Bobby Harrell",
+      "Faculty": "Sipil"
+    },
+    {
+      "NIM": "22007",
+      "Name": "William Stanley",
+      "Faculty": "Mesin"
+    },
+    {
+      "NIM": "22008",
+      "Name": "Charles Green",
+      "Faculty": "Industri"
+    },
+    {
+      "NIM": "22009",
+      "Name": "Lisa Fitzpatrick",
+      "Faculty": "Mesin"
+    },
+    {
+      "NIM": "22010",
+      "Name": "Jesse Manning",
+      "Faculty": "Mesin"
+    },
+    {
+      "NIM": "22011",
+      "Name": "Danny Ho",
+      "Faculty": "Sipil"
+    },
+    {
+      "NIM": "22012",
+      "Name": "Benjamin Simmons",
+      "Faculty": "Elektro"
+    },
+    {
+      "NIM": "22013",
+      "Name": "Danielle Walker",
+      "Faculty": "Sipil"
+    },
+    {
+      "NIM": "22014",
+      "Name": "Barbara Wilkerson",
+      "Faculty": "Mesin"
+    },
+    {
+      "NIM": "22015",
+      "Name": "Jessica Stewart",
+      "Faculty": "Informatika"
+    },
+    {
+      "NIM": "22016",
+      "Name": "Suzanne Rogers",
+      "Faculty": "Informatika"
+    },
+    {
+      "NIM": "22017",
+      "Name": "Jennifer Carlson",
+      "Faculty": "Elektro"
+    },
+    {
+      "NIM": "22018",
+      "Name": "Anthony Norton",
+      "Faculty": "Industri"
+    },
+    {
+      "NIM": "22019",
+      "Name": "Ronald Sims",
+      "Faculty": "Industri"
+    },
+    {
+      "NIM": "22020",
+      "Name": "Nathan Garcia",
+      "Faculty": "Mesin"
+    }
+  ],
+  "clubs": [
+    {
+      "ID": "CLB001",
+      "Name": "Which Club",
+      "Category": "Olahraga",
+      "Description": "Side lawyer along probably worker."
+    },
+    {
+      "ID": "CLB002",
+      "Name": "Listen Club",
+      "Category": "Seni",
+      "Description": "Mind age establish travel have."
+    },
+    {
+      "ID": "CLB003",
+      "Name": "Rate Club",
+      "Category": "Lingkungan",
+      "Description": "Cultural rule international figure outside."
+    },
+    {
+      "ID": "CLB004",
+      "Name": "Certain Club",
+      "Category": "Olahraga",
+      "Description": "Appear pattern activity see fire."
+    },
+    {
+      "ID": "CLB005",
+      "Name": "Sometimes Club",
+      "Category": "Olahraga",
+      "Description": "Risk these role blood."
+    },
+    {
+      "ID": "CLB006",
+      "Name": "Might Club",
+      "Category": "Teknologi",
+      "Description": "Yeah paper remember administration one way imagine."
+    },
+    {
+      "ID": "CLB007",
+      "Name": "Act Club",
+      "Category": "Lingkungan",
+      "Description": "Nation skill throughout our task cultural."
+    },
+    {
+      "ID": "CLB008",
+      "Name": "Lawyer Club",
+      "Category": "Lingkungan",
+      "Description": "Care many such result."
+    },
+    {
+      "ID": "CLB009",
+      "Name": "Collection Club",
+      "Category": "Teknologi",
+      "Description": "Consider soon evidence say plant your where."
+    },
+    {
+      "ID": "CLB010",
+      "Name": "Simply Club",
+      "Category": "Olahraga",
+      "Description": "Everyone trouble special that join or area."
+    },
+    {
+      "ID": "CLB011",
+      "Name": "Approach Club",
+      "Category": "Lingkungan",
+      "Description": "Win follow seat probably down home."
+    },
+    {
+      "ID": "CLB012",
+      "Name": "Pressure Club",
+      "Category": "Olahraga",
+      "Description": "Including gas involve."
+    },
+    {
+      "ID": "CLB013",
+      "Name": "Stuff Club",
+      "Category": "Seni",
+      "Description": "Analysis expect trial report."
+    },
+    {
+      "ID": "CLB014",
+      "Name": "Kind Club",
+      "Category": "Lingkungan",
+      "Description": "Simply break various agent prove crime."
+    },
+    {
+      "ID": "CLB015",
+      "Name": "Garden Club",
+      "Category": "Seni",
+      "Description": "Fear address moment."
+    },
+    {
+      "ID": "CLB016",
+      "Name": "Because Club",
+      "Category": "Teknologi",
+      "Description": "Wind form down everybody memory."
+    },
+    {
+      "ID": "CLB017",
+      "Name": "Bar Club",
+      "Category": "Teknologi",
+      "Description": "Good peace test project method them way."
+    },
+    {
+      "ID": "CLB018",
+      "Name": "Affect Club",
+      "Category": "Teknologi",
+      "Description": "Process whom goal police."
+    },
+    {
+      "ID": "CLB019",
+      "Name": "Here Club",
+      "Category": "Seni",
+      "Description": "Agreement research hand those argue against."
+    },
+    {
+      "ID": "CLB020",
+      "Name": "Within Club",
+      "Category": "Seni",
+      "Description": "Safe government idea gun."
+    }
+  ],
+  "events": [
+    {
+      "ID": "EVT001",
+      "ClubID": "CLB004",
+      "Title": "Organized actuating Internet solution",
+      "Date": "2025-05-30T08:22:43",
+      "Location": "West Jonathan"
+    },
+    {
+      "ID": "EVT002",
+      "ClubID": "CLB019",
+      "Title": "Front-line systemic concept",
+      "Date": "2025-06-22T15:38:45",
+      "Location": "Krystalland"
+    },
+    {
+      "ID": "EVT003",
+      "ClubID": "CLB001",
+      "Title": "Multi-tiered local instruction set",
+      "Date": "2025-07-03T21:09:21",
+      "Location": "New Thomasfort"
+    },
+    {
+      "ID": "EVT004",
+      "ClubID": "CLB019",
+      "Title": "Intuitive homogeneous complexity",
+      "Date": "2025-07-08T13:53:04",
+      "Location": "Port Margaret"
+    },
+    {
+      "ID": "EVT005",
+      "ClubID": "CLB016",
+      "Title": "Digitized client-server toolset",
+      "Date": "2025-06-16T10:22:42",
+      "Location": "Heathshire"
+    },
+    {
+      "ID": "EVT006",
+      "ClubID": "CLB016",
+      "Title": "Reverse-engineered directional approach",
+      "Date": "2025-05-17T17:53:25",
+      "Location": "Nguyenhaven"
+    },
+    {
+      "ID": "EVT007",
+      "ClubID": "CLB013",
+      "Title": "Distributed content-based initiative",
+      "Date": "2025-06-21T15:33:57",
+      "Location": "Ericshire"
+    },
+    {
+      "ID": "EVT008",
+      "ClubID": "CLB019",
+      "Title": "Advanced even-keeled installation",
+      "Date": "2025-07-03T05:47:52",
+      "Location": "South Davidview"
+    },
+    {
+      "ID": "EVT009",
+      "ClubID": "CLB012",
+      "Title": "Switchable radical time-frame",
+      "Date": "2025-06-10T22:51:42",
+      "Location": "Reynoldsland"
+    },
+    {
+      "ID": "EVT010",
+      "ClubID": "CLB016",
+      "Title": "Integrated 24/7 array",
+      "Date": "2025-06-05T12:06:13",
+      "Location": "Jameschester"
+    },
+    {
+      "ID": "EVT011",
+      "ClubID": "CLB013",
+      "Title": "Assimilated intermediate circuit",
+      "Date": "2025-06-11T21:45:17",
+      "Location": "Cuevasside"
+    },
+    {
+      "ID": "EVT012",
+      "ClubID": "CLB015",
+      "Title": "Up-sized bifurcated instruction set",
+      "Date": "2025-05-31T09:07:14",
+      "Location": "Bethville"
+    },
+    {
+      "ID": "EVT013",
+      "ClubID": "CLB004",
+      "Title": "De-engineered mobile service-desk",
+      "Date": "2025-06-08T11:44:34",
+      "Location": "West Amandaborough"
+    },
+    {
+      "ID": "EVT014",
+      "ClubID": "CLB010",
+      "Title": "Re-contextualized holistic access",
+      "Date": "2025-06-05T23:06:39",
+      "Location": "Randytown"
+    },
+    {
+      "ID": "EVT015",
+      "ClubID": "CLB018",
+      "Title": "De-engineered web-enabled forecast",
+      "Date": "2025-06-09T05:23:32",
+      "Location": "Elizabethmouth"
+    },
+    {
+      "ID": "EVT016",
+      "ClubID": "CLB016",
+      "Title": "Ameliorated exuding productivity",
+      "Date": "2025-07-02T06:31:02",
+      "Location": "Jenniferland"
+    },
+    {
+      "ID": "EVT017",
+      "ClubID": "CLB001",
+      "Title": "Progressive high-level hardware",
+      "Date": "2025-06-16T22:51:50",
+      "Location": "Millerport"
+    },
+    {
+      "ID": "EVT018",
+      "ClubID": "CLB004",
+      "Title": "Multi-lateral tertiary capability",
+      "Date": "2025-06-25T12:19:31",
+      "Location": "New Sarastad"
+    },
+    {
+      "ID": "EVT019",
+      "ClubID": "CLB020",
+      "Title": "Persevering attitude-oriented emulation",
+      "Date": "2025-06-07T09:47:52",
+      "Location": "Grantton"
+    },
+    {
+      "ID": "EVT020",
+      "ClubID": "CLB001",
+      "Title": "Secured coherent encryption",
+      "Date": "2025-05-18T00:15:45",
+      "Location": "Solomonstad"
+    }
+  ],
+  "club_members": [
+    {
+      "StudentNIM": "22018",
+      "ClubID": "CLB012",
+      "JoinDate": "2025-04-13T02:44:45",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22006",
+      "ClubID": "CLB005",
+      "JoinDate": "2025-04-30T10:35:10",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22009",
+      "ClubID": "CLB018",
+      "JoinDate": "2025-01-17T08:29:08",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22019",
+      "ClubID": "CLB006",
+      "JoinDate": "2025-01-19T12:20:41",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22004",
+      "ClubID": "CLB014",
+      "JoinDate": "2025-02-08T08:17:46",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22015",
+      "ClubID": "CLB001",
+      "JoinDate": "2025-02-14T21:14:05",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22008",
+      "ClubID": "CLB005",
+      "JoinDate": "2025-02-25T18:16:05",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22016",
+      "ClubID": "CLB016",
+      "JoinDate": "2025-05-21T23:14:49",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22012",
+      "ClubID": "CLB012",
+      "JoinDate": "2024-12-29T14:37:50",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22009",
+      "ClubID": "CLB001",
+      "JoinDate": "2025-03-20T02:23:55",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22018",
+      "ClubID": "CLB003",
+      "JoinDate": "2025-04-22T05:25:01",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22015",
+      "ClubID": "CLB016",
+      "JoinDate": "2025-02-28T11:10:31",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22011",
+      "ClubID": "CLB009",
+      "JoinDate": "2025-05-09T19:49:13",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22005",
+      "ClubID": "CLB006",
+      "JoinDate": "2025-03-12T11:13:50",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22014",
+      "ClubID": "CLB019",
+      "JoinDate": "2024-12-17T02:15:24",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22006",
+      "ClubID": "CLB001",
+      "JoinDate": "2025-03-27T04:16:28",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22013",
+      "ClubID": "CLB012",
+      "JoinDate": "2024-12-19T16:18:48",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22009",
+      "ClubID": "CLB016",
+      "JoinDate": "2025-02-03T23:36:19",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22019",
+      "ClubID": "CLB007",
+      "JoinDate": "2025-03-13T01:06:39",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22014",
+      "ClubID": "CLB001",
+      "JoinDate": "2024-12-22T05:13:11",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22018",
+      "ClubID": "CLB011",
+      "JoinDate": "2025-04-30T15:32:50",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22013",
+      "ClubID": "CLB011",
+      "JoinDate": "2025-03-27T19:15:04",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22003",
+      "ClubID": "CLB003",
+      "JoinDate": "2024-12-20T02:56:48",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22018",
+      "ClubID": "CLB006",
+      "JoinDate": "2025-03-26T04:19:03",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22015",
+      "ClubID": "CLB014",
+      "JoinDate": "2025-04-30T06:45:35",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22005",
+      "ClubID": "CLB012",
+      "JoinDate": "2024-12-25T03:53:50",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22017",
+      "ClubID": "CLB012",
+      "JoinDate": "2025-04-04T19:34:52",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22012",
+      "ClubID": "CLB017",
+      "JoinDate": "2025-03-17T23:19:44",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22019",
+      "ClubID": "CLB015",
+      "JoinDate": "2025-03-04T02:14:49",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22005",
+      "ClubID": "CLB009",
+      "JoinDate": "2025-02-03T05:15:01",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22014",
+      "ClubID": "CLB017",
+      "JoinDate": "2025-04-10T09:59:53",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22008",
+      "ClubID": "CLB003",
+      "JoinDate": "2025-01-17T06:42:04",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22006",
+      "ClubID": "CLB001",
+      "JoinDate": "2025-05-10T17:11:30",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22016",
+      "ClubID": "CLB010",
+      "JoinDate": "2025-02-08T07:35:59",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22009",
+      "ClubID": "CLB007",
+      "JoinDate": "2025-05-02T17:14:15",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22007",
+      "ClubID": "CLB018",
+      "JoinDate": "2025-04-05T05:40:47",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22007",
+      "ClubID": "CLB017",
+      "JoinDate": "2024-12-19T20:35:04",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22011",
+      "ClubID": "CLB017",
+      "JoinDate": "2025-01-24T08:01:28",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22004",
+      "ClubID": "CLB019",
+      "JoinDate": "2025-05-18T02:10:01",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22020",
+      "ClubID": "CLB016",
+      "JoinDate": "2024-12-28T06:46:21",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22001",
+      "ClubID": "CLB019",
+      "JoinDate": "2025-06-13T20:33:37",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22007",
+      "ClubID": "CLB004",
+      "JoinDate": "2025-03-18T17:40:57",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22002",
+      "ClubID": "CLB005",
+      "JoinDate": "2024-12-24T04:21:28",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22002",
+      "ClubID": "CLB008",
+      "JoinDate": "2025-04-05T18:30:56",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22013",
+      "ClubID": "CLB018",
+      "JoinDate": "2025-05-28T04:39:04",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22007",
+      "ClubID": "CLB009",
+      "JoinDate": "2025-04-14T11:58:37",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22017",
+      "ClubID": "CLB005",
+      "JoinDate": "2025-05-10T08:11:24",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22008",
+      "ClubID": "CLB011",
+      "JoinDate": "2025-01-24T11:38:15",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22013",
+      "ClubID": "CLB017",
+      "JoinDate": "2025-04-30T06:48:42",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22014",
+      "ClubID": "CLB009",
+      "JoinDate": "2025-04-02T10:00:09",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22006",
+      "ClubID": "CLB010",
+      "JoinDate": "2025-06-01T05:33:38",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22015",
+      "ClubID": "CLB001",
+      "JoinDate": "2024-12-25T15:02:03",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22013",
+      "ClubID": "CLB010",
+      "JoinDate": "2025-03-09T14:10:43",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22002",
+      "ClubID": "CLB016",
+      "JoinDate": "2025-05-02T14:36:07",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22015",
+      "ClubID": "CLB004",
+      "JoinDate": "2025-04-20T08:16:36",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22018",
+      "ClubID": "CLB006",
+      "JoinDate": "2025-03-12T17:39:07",
+      "Role": 1,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22015",
+      "ClubID": "CLB014",
+      "JoinDate": "2025-02-04T00:33:45",
+      "Role": 2,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22002",
+      "ClubID": "CLB020",
+      "JoinDate": "2024-12-29T20:16:47",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22012",
+      "ClubID": "CLB015",
+      "JoinDate": "2025-03-12T23:15:14",
+      "Role": 2,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22018",
+      "ClubID": "CLB019",
+      "JoinDate": "2025-01-01T10:04:21",
+      "Role": 0,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22008",
+      "ClubID": "CLB016",
+      "JoinDate": "2025-02-24T06:14:40.801227",
+      "Role": 1,
+      "Status": true
+    },
+    {
+      "StudentNIM": "22002",
+      "ClubID": "CLB007",
+      "JoinDate": "2024-11-17T06:14:40.801264",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22005",
+      "ClubID": "CLB013",
+      "JoinDate": "2025-01-30T06:14:40.801278",
+      "Role": 0,
+      "Status": false
+    },
+    {
+      "StudentNIM": "22006",
+      "ClubID": "CLB014",
+      "JoinDate": "2023-11-06T06:14:40.801293",
+      "Role": 0,
+      "Status": false
+    }
+  ],
+  "event_participants": [
+    {
+      "StudentNIM": "22001",
+      "EventID": "EVT001",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22010",
+      "EventID": "EVT020",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22008",
+      "EventID": "EVT004",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22016",
+      "EventID": "EVT009",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22009",
+      "EventID": "EVT012",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22020",
+      "EventID": "EVT020",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22003",
+      "EventID": "EVT001",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22001",
+      "EventID": "EVT015",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22017",
+      "EventID": "EVT009",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22014",
+      "EventID": "EVT003",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22004",
+      "EventID": "EVT001",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22012",
+      "EventID": "EVT018",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22010",
+      "EventID": "EVT020",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22006",
+      "EventID": "EVT018",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22010",
+      "EventID": "EVT019",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22004",
+      "EventID": "EVT001",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22016",
+      "EventID": "EVT016",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22007",
+      "EventID": "EVT012",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22004",
+      "EventID": "EVT018",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22007",
+      "EventID": "EVT008",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22006",
+      "EventID": "EVT013",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22001",
+      "EventID": "EVT015",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22001",
+      "EventID": "EVT011",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22009",
+      "EventID": "EVT016",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22004",
+      "EventID": "EVT005",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22015",
+      "EventID": "EVT007",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22018",
+      "EventID": "EVT014",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22008",
+      "EventID": "EVT011",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22017",
+      "EventID": "EVT010",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22012",
+      "EventID": "EVT014",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22016",
+      "EventID": "EVT011",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22010",
+      "EventID": "EVT001",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22016",
+      "EventID": "EVT010",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22008",
+      "EventID": "EVT006",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22015",
+      "EventID": "EVT018",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22007",
+      "EventID": "EVT008",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22011",
+      "EventID": "EVT011",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22001",
+      "EventID": "EVT010",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22015",
+      "EventID": "EVT005",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22003",
+      "EventID": "EVT020",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22008",
+      "EventID": "EVT008",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22015",
+      "EventID": "EVT004",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22017",
+      "EventID": "EVT002",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22013",
+      "EventID": "EVT005",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22019",
+      "EventID": "EVT020",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22020",
+      "EventID": "EVT006",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22020",
+      "EventID": "EVT019",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22005",
+      "EventID": "EVT002",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22003",
+      "EventID": "EVT015",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22016",
+      "EventID": "EVT019",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22011",
+      "EventID": "EVT008",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22008",
+      "EventID": "EVT004",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22001",
+      "EventID": "EVT009",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22015",
+      "EventID": "EVT008",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22011",
+      "EventID": "EVT009",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22007",
+      "EventID": "EVT018",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22003",
+      "EventID": "EVT009",
+      "Status": "checked-in",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22020",
+      "EventID": "EVT007",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22007",
+      "EventID": "EVT002",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22003",
+      "EventID": "EVT010",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22007",
+      "EventID": "EVT015",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22012",
+      "EventID": "EVT007",
+      "Status": "checked-in",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22013",
+      "EventID": "EVT014",
+      "Status": "registered",
+      "Role": "peserta"
+    },
+    {
+      "StudentNIM": "22004",
+      "EventID": "EVT012",
+      "Status": "registered",
+      "Role": "panitia"
+    },
+    {
+      "StudentNIM": "22017",
+      "EventID": "EVT013",
+      "Status": "registered",
+      "Role": "panitia"
+    }
+  ]
+}
