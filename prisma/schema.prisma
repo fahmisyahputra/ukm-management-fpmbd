@@ -10,6 +10,7 @@ datasource db {
 model Student {
   NIM                  String                 @id
   Name                 String
+  Email                String                 @unique
   Faculty              String
   Events_Participant   Events_Participant[]
   Students_Club_Member Students_Club_Member[]
