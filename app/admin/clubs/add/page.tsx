@@ -4,25 +4,48 @@ import { redirect } from 'next/navigation';
 export default function AddClubPage() {
   async function createClub(formData: FormData) {
     'use server';
-    const name = formData.get('Name') as string;
-    const category = formData.get('Category') as string;
-    const description = formData.get('Description') as string;
+    
+    try {
+      const name = formData.get('Name') as string;
+      const category = formData.get('Category') as string;
+      const description = formData.get('Description') as string;
 
-await prisma.club.create({
-  data: {
-    Name: name,
-    Category: category,
-    Description: description,
-  } as any, // quick fix
-});
+      // Transaction ensures atomic ID generation
+      const newClub = await prisma.$transaction(async (tx) => {
+        // Get latest club ID
+        const latestClub = await tx.club.findFirst({
+          orderBy: { ID: 'desc' },
+          select: { ID: true }
+        });
 
+        // Generate new ID (CLB001, CLB002, etc.)
+        const nextNumber = latestClub 
+          ? parseInt(latestClub.ID.replace('CLB', '')) + 1 
+          : 1;
+        const newID = `CLB${nextNumber.toString().padStart(3, '0')}`;
 
-    redirect('/admin/clubs');
+        // Create club with new ID
+        return await tx.club.create({
+          data: {
+            ID: newID,
+            Name: name,
+            Category: category,
+            Description: description,
+            Status: "pending" // Default status
+          }
+        });
+      });
+
+      redirect('/admin/clubs');
+    } catch (error) {
+      console.error("Failed to create club:", error);
+      throw error; // Let Next.js handle the error
+    }
   }
 
   return (
     <main className="min-h-screen bg-white text-blue-900">
-      {/* Navbar */}
+      {/* Navbar - unchanged */}
       <nav className="bg-blue-900 text-white py-4 px-8 flex justify-between items-center">
         <h1 className="text-xl font-bold">Admin Dashboard</h1>
         <ul className="flex space-x-4">

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
-type EventWithView = {
+type EventWithParticipants = {
   ID: string;
   Title: string;
   Date: string;
@@ -10,61 +10,80 @@ type EventWithView = {
   ClubName: string;
   ManagerName: string | null;
   ManagerEmail: string | null;
+  participantCount: number;
 };
 
-// Fahmi-Query VIEW untuk melihat daftar Event, Club, Date, Location, Manager, Email
 export default async function EventsPage() {
-  const events = await prisma.$queryRaw<EventWithView[]>`
-    SELECT 
-      e."ID", 
-      e."Title", 
-      e."Date", 
-      e."Location", 
-      v."ClubName", 
-      v."ManagerName", 
-      v."ManagerEmail"
-    FROM "Event" e
-    JOIN "ClubWithManagerView" v ON e."ClubID" = v."ClubID"
-  `;
+  const events = await prisma.event.findMany({
+    select: {
+      ID: true,
+      Title: true,
+      Date: true,
+      Location: true,
+      Club: {
+        select: {
+          Name: true,
+          User: {
+            select: {
+              name: true,
+              email: true
+            }
+          }
+        }
+      },
+      _count: {
+        select: {
+          Events_Participant: true
+        }
+      }
+    }
+  });
+
+  const formattedEvents = events.map(event => ({
+    ID: event.ID,
+    Title: event.Title,
+    Date: event.Date.toISOString(),
+    Location: event.Location,
+    ClubName: event.Club.Name,
+    ManagerName: event.Club.User?.name || null,
+    ManagerEmail: event.Club.User?.email || null,
+    participantCount: event._count.Events_Participant
+  }));
 
   return (
     <main className="p-10">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Event List View</h1>
-        <div className="space-x-2">
-          <Link href="/admin/events/add">
-            <button className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition">
-              + Add Event
-            </button>
-          </Link>
-          <Link href="/admin/event-logs">
-            <button className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 transition">
-              📝 View Logs
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      <table className="w-full table-auto border-collapse text-sm shadow">
-        <thead>
-          <tr className="bg-blue-800 text-white">
-            <th className="p-2 border">Event</th>
-            <th className="p-2 border">Club</th>
-            <th className="p-2 border">Date</th>
-            <th className="p-2 border">Location</th>
-            <th className="p-2 border">Manager</th>
-            <th className="p-2 border">Email</th>
+      <h1 className="text-2xl font-bold mb-6">Events Management</h1>
+      <table className="w-full">
+        <thead className="bg-gray-200">
+          <tr>
+            <th className="p-2 text-left">Title</th>
+            <th className="p-2 text-left">Club</th>
+            <th className="p-2 text-left">Date</th>
+            <th className="p-2 text-left">Location</th>
+            <th className="p-2 text-left">Manager</th>
+            <th className="p-2 text-left">Manager Email</th>
+            <th className="p-2 text-left">Participants</th>
+            <th className="p-2 text-left">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {events.map((e) => (
-            <tr key={e.ID} className="border-t hover:bg-gray-100">
-              <td className="p-2">{e.Title}</td>
-              <td className="p-2">{e.ClubName}</td>
-              <td className="p-2">{new Date(e.Date).toLocaleDateString()}</td>
-              <td className="p-2">{e.Location}</td>
-              <td className="p-2">{e.ManagerName ?? "-"}</td>
-              <td className="p-2">{e.ManagerEmail ?? "-"}</td>
+          {formattedEvents.map((event) => (
+            <tr key={event.ID} className="border-t hover:bg-gray-100">
+              <td className="p-2">{event.Title}</td>
+              <td className="p-2">{event.ClubName}</td>
+              <td className="p-2">{new Date(event.Date).toLocaleDateString()}</td>
+              <td className="p-2">{event.Location}</td>
+              <td className="p-2">{event.ManagerName ?? "-"}</td>
+              <td className="p-2">{event.ManagerEmail ?? "-"}</td>
+              <td className="p-2">{event.participantCount}</td>
+              <td className="p-2">
+                <Link 
+                  href={`/admin/events/${event.ID}/participants`}
+                  className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                >
+                  View Participants
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>

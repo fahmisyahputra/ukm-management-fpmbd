@@ -6,6 +6,16 @@ import Link from "next/link"
 import { useTransition } from "react"
 import { deleteClub } from "@/lib/actions/deleteClub"
 
+interface ClubCardProps {
+  id: string
+  name: string
+  description: string
+  category: string
+  manager?: string
+  members: number
+  events: string
+}
+
 export function ClubCard({
   id,
   name,
@@ -13,14 +23,8 @@ export function ClubCard({
   category,
   manager,
   members,
-}: {
-  id: string
-  name: string
-  description: string
-  category: string
-  manager?: string
-  members: number
-}) {
+  events
+}: ClubCardProps) {
   const categories = category?.split(',') ?? []
   const [isPending, startTransition] = useTransition()
 
@@ -50,34 +54,53 @@ export function ClubCard({
           ))}
         </div>
 
-        {/* Jumlah anggota aktif */}
         <p className="mt-4 text-xs text-white/80 flex items-center">
           <span className="w-2 h-2 bg-green-400 rounded-full mr-2 inline-block" />
           {members} active member{members !== 1 ? "s" : ""}
         </p>
 
-        {/* Nama Manajer */}
         <p className="mt-1 text-xs text-white/80 flex items-center">
           <span className="w-2 h-2 bg-black rounded-full mr-2 inline-block" />
           {manager || "Unknown Manager"}
         </p>
+
+        <p className="mt-2 text-xs text-white/80 flex items-center">
+          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2 inline-block" />
+          {events}
+        </p>
       </CardContent>
 
-      <CardFooter className="bg-blue-800 text-sm justify-between px-6 py-3">
+      <CardFooter className="bg-blue-800 text-sm justify-between px-6 py-3 flex-wrap gap-2">
         <Link
-          href={`/admin/clubs/${id}/edit`}
-          className="text-yellow-300 hover:underline"
+          href={`/admin/clubs/${id}/members`}
+          className="text-white hover:text-yellow-300 text-xs"
         >
-          Edit
+          View Members
+        </Link>
+        
+        <Link
+          href={`/admin/clubs/${id}/events`}
+          className="text-white hover:text-yellow-300 text-xs"
+        >
+          View Events
         </Link>
 
-        <button
-          onClick={() => startTransition(() => deleteClub(id))}
-          disabled={isPending}
-          className="text-white hover:text-red-400"
-        >
-          {isPending ? "Deleting..." : "Delete"}
-        </button>
+        <div className="flex gap-2">
+          <Link
+            href={`/admin/clubs/${id}/edit`}
+            className="text-yellow-300 hover:underline text-xs"
+          >
+            Edit
+          </Link>
+
+          <button
+            onClick={() => startTransition(() => deleteClub(id))}
+            disabled={isPending}
+            className="text-white hover:text-red-400 text-xs"
+          >
+            {isPending ? "Deleting..." : "Delete"}
+          </button>
+        </div>
       </CardFooter>
     </Card>
   )

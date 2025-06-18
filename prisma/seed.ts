@@ -13,8 +13,15 @@ async function main() {
   await prisma.club.deleteMany();
   await prisma.student.deleteMany();
 
-  // Tambahkan data Student dan Club langsung
-  await prisma.student.createMany({ data: data.students });
+  // Tambahkan data Student dengan email yang digenerate
+  await prisma.student.createMany({
+    data: data.students.map(student => ({
+      ...student,
+      Email: `${student.NIM}@example.com` // Generate email from NIM
+    }))
+  });
+
+  // Seed clubs (unchanged)
   await prisma.club.createMany({ data: data.clubs });
 
   // ====== EVENTS ======

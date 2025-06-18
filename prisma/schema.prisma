@@ -10,21 +10,21 @@ datasource db {
 model Student {
   NIM                  String                 @id
   Name                 String
-  Email                String                 @unique
+  Email                String?                
   Faculty              String
   Events_Participant   Events_Participant[]
   Students_Club_Member Students_Club_Member[]
 }
 
 model Club {
-  ID                   String                 @id
-  Name                 String
-  Description          String
-  Category             String
-  ManagerID            String?
-  Status               String                 @default("pending")
+  ID                  String                  @id @default("CLB000") // Add default (will be overridden)
+  Name                String
+  Description         String
+  Category            String
+  ManagerID           String?
+  Status              String                  @default("pending")
   User                 User?                  @relation(fields: [ManagerID], references: [id])
-  Event                Event[]
+  Event               Event[]
   Students_Club_Member Students_Club_Member[]
 }
 

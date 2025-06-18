@@ -4,31 +4,64 @@ import Image from "next/image"
 import { ClubCard } from "@/components/CLubCard"
 import { getClubMemberCount } from "@/lib/functions"
 
-interface ClubWithManager {
+interface ClubWithDetails {
   ID: string
   Name: string
   Description: string
   Category: string
   ManagerName: string | null
   memberCount: number
+  eventStatus: string
 }
 
-// Fahmi-Query JOIN untuk mendapatkan data klub dengan nama manajer dan menampilkan semua klub pada halaman admin
 export default async function ClubsPage() {
-  const rawClubs = await prisma.$queryRaw<
-    Omit<ClubWithManager, 'memberCount'>[]
+  // Query 1: Get basic club info and manager
+  const clubsWithManager = await prisma.$queryRaw<
+    Array<Omit<ClubWithDetails, 'memberCount' | 'eventStatus'>>
   >`
-    SELECT c."ID", c."Name", c."Description", c."Category", u."name" AS "ManagerName"
-    FROM "club" c
-    LEFT JOIN "user" u ON c."ManagerID" = u."id"
+    SELECT 
+      c."ID", 
+      c."Name", 
+      c."Description", 
+      c."Category", 
+      COALESCE(
+        (SELECT s."Name" 
+         FROM "Students_Club_Member" scm
+         JOIN "Student" s ON scm."StudentNIM" = s."NIM"
+         WHERE scm."ClubID" = c."ID" AND scm."Role" = 1
+         LIMIT 1),
+        u."name",
+        'Unassigned'
+      ) AS "ManagerName"
+    FROM "Club" c
+    LEFT JOIN "User" u ON c."ManagerID" = u."id"
   `;
 
-  // Fahmi-Query FUNCTION Tambahkan member count dari helper dan menampilkan di halaman admin jumlah anggota aktif nya
-  const clubs: ClubWithManager[] = await Promise.all(
-    rawClubs.map(async (club) => ({
-      ...club,
-      memberCount: await getClubMemberCount(club.ID),
-    }))
+  // Query 2: Get event counts for each club
+  const eventCounts = await prisma.$queryRaw<
+    Array<{ ClubID: string, eventCount: bigint }>
+  >`
+    SELECT 
+      "ClubID",
+      COUNT("ID") as "eventCount"
+    FROM "Event"
+    GROUP BY "ClubID"
+  `;
+
+  // Combine the data
+  const clubs: ClubWithDetails[] = await Promise.all(
+    clubsWithManager.map(async (club) => {
+      const clubEvents = eventCounts.find(ec => ec.ClubID === club.ID);
+      const eventCount = clubEvents ? Number(clubEvents.eventCount) : 0;
+      
+      return {
+        ...club,
+        memberCount: await getClubMemberCount(club.ID),
+        eventStatus: eventCount > 0 
+          ? `Has ${eventCount} event${eventCount !== 1 ? 's' : ''}` 
+          : "No events yet"
+      };
+    })
   );
 
   return (
@@ -76,7 +109,8 @@ export default async function ClubsPage() {
               description={club.Description}
               category={club.Category}
               manager={club.ManagerName || "Unassigned"}
-              members={club.memberCount} // ← Tambahkan ini ke komponen
+              members={club.memberCount}
+              events={club.eventStatus}
             />
           ))}
         </div>
